@@ -11,10 +11,10 @@
 	<h1>DB登録（顧客名簿:CUSTOMER）</h1>
 	<div id="access">
 		<form method="post" action="register">
-			<span class="colorr-red">顧客コード</span><input type="text" name="c_num" maxlength="4" required="required">
+			<span class="colorr-red">顧客コード</span><input type="text" name="c_num" maxlength="4" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
 			<span class="colorr-red">顧客名</span><input type="text" name="c_name" required="required">
 			<span>住所</span><input type="text" name="address">
-			
+			<span>TEL</span><input type="text" name="tel" maxlength="11" oninput="value = value.replace(/[^0-9]+/i,'');">
 			<div id="insert">
 				<input type="submit" class="btn btn-outline-success" value="登録">
 			</div>

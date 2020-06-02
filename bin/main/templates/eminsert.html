@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>DB登録</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<link th:href="@{/css/common.css}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+	<h1>DB登録（従業員名簿:EMPLOYEE）</h1>
+	<div id="access">
+		<form method="post" action="register2">
+			<span class="colorr-red">社員NO</span><input type="text" name="e_num" maxlength="5" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<span class="colorr-red">氏名</span><input type="text" name="e_name" required="required">
+			<span class="colorr-red">入社年</span><input type="text" name="e_year" oninput="value = value.replace(/[^0-9]+/i,'');" maxlength="4" required="required">
+			<span>所属部署</span><input type="text" name="depart_cd" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<div id="insert">
+				<input type="submit" class="btn btn-outline-success" value="登録">
+			</div>
+				
+		</form>
+		
+
+	</div>
+</body>
+</html>
