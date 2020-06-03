@@ -8,18 +8,22 @@
 
 </head>
 <body>
+	<!-- DB上にデータ一覧の文字列表示 -->
 	<h1>データ一覧（従業員名簿:EMPLOYEE）</h1>
+	<!-- idクラスemlistを作成 -->
 	<div id="emlist">
-	
+		<!-- tableクラス作成 -->
 		<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
 			<thead>
 				<tr>
+					<!-- 表の見出しに社員NO、氏名、入社年、所属部署を表示 -->
 					<th>社員NO</th>
 					<th>氏名</th>
 					<th>入社年</th>
 					<th>所属部署</th>
 				</tr>
 			</thead>
+				<!-- employeeを繰り返し処理 employeeのオブジェクト参照-->
 				<tr th:each="employee : ${employeelist}" th:object="${employee}">
 					<td id="td_num" th:text="*{e_num}"></td>		
 					<td id="td_name" th:text="*{e_name}"></td>		

@@ -8,14 +8,23 @@
 
 </head>
 <body>
+	<!-- データ登録を押した際に画面上にDB登録と表記 -->
 	<h1>DB登録（顧客名簿:CUSTOMER）</h1>
+	<!-- idクラスaccessを作成 -->
 	<div id="access">
+		<!-- メソッド名post, 送信先をregister3に指定-->
 		<form method="post" action="register">
-			<span class="colorr-red">顧客コード</span><input type="text" name="c_num" maxlength="4" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
-			<span class="colorr-red">顧客名</span><input type="text" name="c_name" required="required">
-			<span>住所</span><input type="text" name="address">
+			<!-- 顧客コードのテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限4文字まで　数字のみ記入可 -->
+			<span class="colorr-red">顧客コード</span><input type="text" name="c_num" maxlength="4" required="required" oninput="value = value.replace(/[^0-9]+/i,'');"> 
+			<!-- 顧客名のテキストエリア作成　赤枠で囲む　記入されてないと注意表記　数字のみ記入可 文字制限100文字まで -->
+			<span class="colorr-red">顧客名</span><input type="text" name="c_name" required="required" maxlength="100"> 
+			<!-- 住所のテキストエリア作成  文字制限256文字まで-->
+			<span>住所</span><input type="text" name="address" maxlength="256">
+			<!-- TELのテキストエリア作成　文字制限11文字まで　数字のみ記入可 -->
 			<span>TEL</span><input type="text" name="tel" maxlength="11" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<!-- idクラスinsert作成 -->
 			<div id="insert">
+				<!-- 送信ボタンを作成　表示を登録表記に変更 -->
 				<input type="submit" class="btn btn-outline-success" value="登録">
 			</div>
 				

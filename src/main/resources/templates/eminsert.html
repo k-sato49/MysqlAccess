@@ -8,14 +8,23 @@
 
 </head>
 <body>
+	<!-- データ登録を押した際に画面上にDB登録と表記 -->
 	<h1>DB登録（従業員名簿:EMPLOYEE）</h1>
+	<!-- idクラスaccessを作成 -->
 	<div id="access">
+		<!-- メソッド名post, 送信先をregister3に指定-->
 		<form method="post" action="register2">
+			<!-- 社員NOのテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限5文字まで　数字のみ記入可 -->
 			<span class="colorr-red">社員NO</span><input type="text" name="e_num" maxlength="5" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
-			<span class="colorr-red">氏名</span><input type="text" name="e_name" required="required">
+			<!-- 氏名のテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限40文字まで　 -->
+			<span class="colorr-red">氏名</span><input type="text" name="e_name" required="required"　maxlength="40">
+			<!-- 入社年のテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限4文字まで　数字のみ記入可 -->
 			<span class="colorr-red">入社年</span><input type="text" name="e_year" oninput="value = value.replace(/[^0-9]+/i,'');" maxlength="4" required="required">
+			<!-- 所属部署のテキストエリア作成　　文字制限2文字まで　数字のみ記入可 -->
 			<span>所属部署</span><input type="text" name="depart_cd" maxlength="2" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<!-- idクラスinsert作成 -->
 			<div id="insert">
+				<!-- 送信ボタンを作成　表示を登録表記に変更 -->
 				<input type="submit" class="btn btn-outline-success" value="登録">
 			</div>
 				

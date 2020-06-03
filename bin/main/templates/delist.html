@@ -8,16 +8,20 @@
 
 </head>
 <body>
+	<!-- DB上にデータ一覧の文字列表示 -->
 	<h1>データ一覧（顧客名簿:EMPLOYEE）</h1>
-	<div id="emlist">
-	
+	<!-- idクラスdelistを作成 -->
+	<div id="delist">
+		<!-- tableクラス作成 -->
 		<table class="table table-responsive table-striped table-bordered table-hover table-sm mx-auto">
 			<thead>
 				<tr>
+					<!-- 表の見出しに部署コード、部署名を表示 -->
 					<th>部署コード</th>
 					<th>部署名</th>
 				</tr>
 			</thead>
+				<!-- departmentを繰り返し処理 departmentのオブジェクト参照-->
 				<tr th:each="department : ${departmentlist}" th:object="${department}">
 					<td id="td_cd" th:text="*{d_cd}"></td>		
 					<td id="td_name" th:text="*{d_name}"></td>		

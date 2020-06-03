@@ -102,6 +102,7 @@ public class MysqlAccessController {
 		return "登録しました";
 	}
 	
+	// DB登録処理
 	@PostMapping(path="/register2")
 	public @ResponseBody String addNewEmployee(	  @RequestParam String e_num 
 												, @RequestParam String e_name
@@ -122,6 +123,7 @@ public class MysqlAccessController {
 		return "登録しました";
 	}
 
+	// DB登録処理
 	@PostMapping(path="/register3")
 	public @ResponseBody String addNewDepartment(	  @RequestParam String d_cd 
 												, @RequestParam String d_name) {

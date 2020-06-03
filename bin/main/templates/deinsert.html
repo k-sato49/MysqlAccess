@@ -8,12 +8,19 @@
 
 </head>
 <body>
+	<!-- データ登録を押した際に画面上にDB登録と表記 -->
 	<h1>DB登録（部署名:DEPARTMENT）</h1>
+	<!-- idクラスaccessを作成 -->
 	<div id="access">
+		<!-- メソッド名post, 送信先をregister3に指定-->
 		<form method="post" action="register3">
+			<!-- 部署コードのテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限2文字まで　数字のみ記入可 -->
 			<span class="colorr-red">部署コード</span><input type="text"  name="d_cd" maxlength="2" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<!-- 部署名のテキストエリア作成　赤枠で囲む　記入されてないと注意表記　文字制限20文字まで　 -->
 			<span class="colorr-red">部署名</span><input type="text" name="d_name" maxlength="20" required="required">
+			<!-- idクラスinsert作成 -->
 			<div id="insert">
+				<!-- 送信ボタンを作成　表示を登録表記に変更 -->
 				<input type="submit" class="btn btn-outline-success" value="登録">
 			</div>
 			
